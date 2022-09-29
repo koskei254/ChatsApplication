@@ -1,4 +1,4 @@
-package com.example.chatsapplication
+package com.dismus.chatsapplication
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -44,18 +44,18 @@ class SignUp : AppCompatActivity() {
 
     private fun signUp(name:String,email:String,password:String){
         //logic of creating user
-        auth.createUserWithEmailAndPassword(email, password)
-            .addOnCompleteListener(this) { task ->
-                if (task.isSuccessful) {
+        auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener {
+            task->
+            if (task.isSuccessful) {
 
-                    addUserToDatabase(name,email,auth.currentUser?.uid!!)
-                    val intent = Intent(this@SignUp, MainActivity::class.java)
-                    finish()
-                    startActivity(intent)
-                } else {
-                    Toast.makeText(this@SignUp,"some error occurred", Toast.LENGTH_SHORT).show()
-                }
+                addUserToDatabase(name,email,auth.currentUser?.uid!!)
+                val intent = Intent(this@SignUp, MainActivity::class.java)
+                startActivity(intent)
+                Toast.makeText(this@SignUp,"success", Toast.LENGTH_SHORT).show()
+            } else {
+                Toast.makeText(this@SignUp,"some error occurred", Toast.LENGTH_SHORT).show()
             }
+        }
     }
 
     private fun addUserToDatabase(name:String,email:String, uid:String){

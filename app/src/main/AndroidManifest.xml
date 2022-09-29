@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.chatsapplication">
+    package="com.dismus.chatsapplication">
 
     <application
         android:allowBackup="true"
@@ -14,13 +14,13 @@
         android:theme="@style/Theme.ChatsApplication"
         tools:targetApi="31">
         <activity
-            android:name=".ChatActivity"
+            android:name="com.dismus.chatsapplication.ChatActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUp"
+            android:name="com.dismus.chatsapplication.SignUp"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name="com.dismus.chatsapplication.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -29,7 +29,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name="com.dismus.chatsapplication.MainActivity"
             android:exported="true">
 
         </activity>

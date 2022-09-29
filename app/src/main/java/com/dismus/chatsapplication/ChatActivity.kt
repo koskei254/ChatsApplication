@@ -1,6 +1,5 @@
-package com.example.chatsapplication
+package com.dismus.chatsapplication
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText

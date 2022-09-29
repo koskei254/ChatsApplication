@@ -1,15 +1,16 @@
 {
   "project_info": {
     "project_number": "946967827288",
+    "firebase_url": "https://chatsapplication-d602a-default-rtdb.firebaseio.com",
     "project_id": "chatsapplication-d602a",
     "storage_bucket": "chatsapplication-d602a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:946967827288:android:fbda3601fd25369a848b2d",
+        "mobilesdk_app_id": "1:946967827288:android:13845c4bd12241cc848b2d",
         "android_client_info": {
-          "package_name": "com.example.chatsapplication"
+          "package_name": "com.dismus.chatsapplication"
         }
       },
       "oauth_client": [

@@ -1,4 +1,4 @@
-package com.example.chatsapplication
+package com.dismus.chatsapplication
 
 class User {
     var name : String? = null
