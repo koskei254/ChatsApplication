@@ -44,14 +44,15 @@ class SignUp : AppCompatActivity() {
 
     private fun signUp(name:String,email:String,password:String){
         //logic of creating user
-        auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener {
-            task->
+
+        auth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(this) {
+                task->
             if (task.isSuccessful) {
 
                 addUserToDatabase(name,email,auth.currentUser?.uid!!)
                 val intent = Intent(this@SignUp, MainActivity::class.java)
                 startActivity(intent)
-                Toast.makeText(this@SignUp,"success", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this@SignUp,"SignUp success", Toast.LENGTH_SHORT).show()
             } else {
                 Toast.makeText(this@SignUp,"some error occurred", Toast.LENGTH_SHORT).show()
             }
